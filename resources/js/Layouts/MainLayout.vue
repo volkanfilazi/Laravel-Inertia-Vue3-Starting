@@ -1,18 +1,17 @@
 <template>
-  <div class="root">
-    <Link href="/">Main Page</Link>
-    <Link href="/hello">Show Page</Link>
-    <Link href="/listing">Listing</Link>
-  
+  <div>
+    <div class="navigation">
+      <Link href="/listing">Listing</Link>
+      <Link href="/listing/create">New Listing</Link>
+    </div>
     <h2 v-if="flashSuccess">{{ flashSuccess }}</h2>
   </div>
   <slot></slot>
-
 </template>
 
 <script setup>
 import { Link, usePage } from '@inertiajs/inertia-vue3'
-import {computed} from 'vue'
+import { computed } from 'vue'
 
 const page = usePage()
 const flashSuccess = computed(() => page.props.value.flash.success)
@@ -20,9 +19,10 @@ const flashSuccess = computed(() => page.props.value.flash.success)
 </script>
 
 <style>
-.root {
+.navigation {
   display: flex;
-  flex-direction: column;
+  flex-direction: flex;
+  gap: 2px;
   margin-bottom: 0px;
 }
 </style>
