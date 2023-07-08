@@ -1,8 +1,13 @@
 <template>
-  <div v-for="listing in listings" :key="listing.id">
-    <Link :href="`/listing/${listing.id}`">
-    <ListingAddress :listing="listing"></ListingAddress>
-    </Link>
+  <div class="container" v-for="listing in listings" :key="listing.id">
+    <div>
+      <Link :href="`/listing/${listing.id}`">
+      <ListingAddress :listing="listing"></ListingAddress>
+      </Link>
+    </div>
+    <div>
+      <Link :href="`/listing/${listing.id}/edit`">Edit</Link>
+    </div>
   </div>
 </template>
 
@@ -13,3 +18,11 @@ defineProps({
   listings: Array,
 })
 </script>
+
+<style scoped>
+  .container{
+    display: flex;
+    flex-direction: flex;
+    gap: 5px;
+  }
+</style>
