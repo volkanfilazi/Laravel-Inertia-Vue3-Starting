@@ -6,7 +6,10 @@
       </Link>
     </div>
     <div>
-      <Link :href="`/listing/${listing.id}/edit`">Edit</Link>
+      <Link :href="`/listing/${listing.id}/edit`" as="button">Edit</Link>
+    </div>
+    <div>
+      <Link method="DELETE" :href="`/listing/${listing.id}`" as="button">Delete</Link>
     </div>
   </div>
 </template>
@@ -17,12 +20,15 @@ import ListingAddress from '../../Components/ListingAddress.vue'
 defineProps({
   listings: Array,
 })
+
+const deleteItem = () => (`/listing/{${listing.id}}`);
+
 </script>
 
 <style scoped>
-  .container{
-    display: flex;
-    flex-direction: flex;
-    gap: 5px;
-  }
+.container {
+  display: flex;
+  flex-direction: flex;
+  gap: 5px;
+}
 </style>
