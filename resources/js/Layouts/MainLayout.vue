@@ -1,11 +1,18 @@
 <template>
-  <div>
-    <div class="navigation">
-      <Link href="/listing">Listing</Link>
-      <Link href="/listing/create">New Listing</Link>
-    </div>
-    <h2 v-if="flashSuccess">{{ flashSuccess }}</h2>
-  </div>
+    <header class="border-b-[1px] border-black">
+      <div class="mx-auto">
+        <nav class="p-4 flex items-center justify-between">
+          <Link class="text-red-700 font-bold" :href="route('listing.index')">Listings</Link>
+          <Link class="text-red-700 font-bold" :href="route('listing.index')">Volkan Estate</Link>
+          <div class="text-white p-1 rounded-md bg-red-700">
+            <Link :href="route('listing.create')">+ New Listing</Link>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="p-4 ">
+      <h2 class="bg-blue-300 border-[1px] border-blue-500 rounded-md text-black font-semibold p-1" v-if="flashSuccess">{{ flashSuccess }}</h2>
+    </main>
   <slot></slot>
 </template>
 
@@ -17,12 +24,3 @@ const page = usePage()
 const flashSuccess = computed(() => page.props.value.flash.success)
 
 </script>
-
-<style>
-.navigation {
-  display: flex;
-  flex-direction: flex;
-  gap: 2px;
-  margin-bottom: 0px;
-}
-</style>
