@@ -2,9 +2,9 @@
     <header class="border-b-[1px] border-black">
       <div class="mx-auto">
         <nav class="p-4 flex items-center justify-between">
-          <Link class="text-red-700 font-bold" :href="route('listing.index')">Listings</Link>
-          <Link class="text-red-700 font-bold" :href="route('listing.index')">Volkan Estate</Link>
-          <div class="text-white p-1 rounded-md bg-red-700">
+          <Link class="text-blue-700 font-bold" :href="route('listing.index')">Listings</Link>
+          <Link class="text-blue-700 font-bold" :href="route('listing.index')">Volkan Estate</Link>
+          <div class="button-primary">
             <Link :href="route('listing.create')">+ New Listing</Link>
           </div>
         </nav>

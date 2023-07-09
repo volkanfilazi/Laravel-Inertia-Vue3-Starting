@@ -2,7 +2,14 @@ import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import MainLayout from './Layouts/MainLayout.vue'
 import { ZiggyVue } from 'ziggy'
+import {InertiaProgress} from '@inertiajs/progress'
 
+InertiaProgress.init({
+  delay: 0,
+  color: '#29d',
+  includeCSS: true,
+  showSpinner: true
+})
 createInertiaApp({
   resolve: async name => {
     const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
