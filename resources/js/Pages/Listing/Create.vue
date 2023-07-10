@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="create">
-    <div class="space-y-5 px-4">
+    <div class="md:w-1/2 mx-auto space-y-5 px-4">
 
       <div class="grid  grid-cols-3 gap-5">
         <div>
