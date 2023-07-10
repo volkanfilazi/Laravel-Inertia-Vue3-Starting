@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserAccountController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ListingController;
@@ -35,4 +36,7 @@ Route::post('login', [Authcontroller::class, 'store'])
 
 Route::delete('logout', [Authcontroller::class, 'destroy'])
   ->name('logout');
+
+Route::resource('user-account', UserAccountController::class)
+  ->only(['create', 'store']);  
 
