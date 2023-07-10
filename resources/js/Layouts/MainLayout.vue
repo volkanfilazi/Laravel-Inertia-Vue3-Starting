@@ -10,10 +10,12 @@
         </nav>
       </div>
     </header>
-    <main class="p-4 ">
-      <h2 class="bg-blue-300 border-[1px] border-blue-500 rounded-md text-black font-semibold p-1" v-if="flashSuccess">{{ flashSuccess }}</h2>
+    <main class="p-4">
+      <div class="px-4">
+        <h2 class="bg-blue-300 border-[1px] border-blue-500 mb-2 rounded-md text-black font-semibold p-1" v-if="flashSuccess">{{ flashSuccess }}</h2>
+      </div>
+      <slot>Default</slot>
     </main>
-  <slot></slot>
 </template>
 
 <script setup>
