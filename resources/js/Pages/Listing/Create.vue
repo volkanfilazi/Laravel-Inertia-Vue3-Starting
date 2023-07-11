@@ -39,10 +39,10 @@
 
         <div class="col-span-2">
           <div class="flex flex-col">
-            <label class="label">Post Code</label>
-            <input class="input" v-model="form.code" type="text" />
+            <label class="label">Street nr</label>
+            <input class="input" v-model="form.street_nr" type="text" />
           </div>
-          <div v-if="form.errors.code" class="input-error">{{ form.errors.code }}</div>
+          <div v-if="form.errors.street_nr" class="input-error">{{ form.errors.street_nr }}</div>
         </div>
       </div>
 
