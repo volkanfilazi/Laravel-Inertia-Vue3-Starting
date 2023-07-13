@@ -13,13 +13,16 @@
       </div>
       <div>
         <button class="button-primary w-full" type="submit">Login</button>
+        <div class="mt-2 text-center">
+          <Link class="text-sm text-gray-500" :href="route('user-account.create')">Need an account? Click here</Link>
+        </div>
       </div>
     </div>
   </form>
 </template>
 
 <script setup>
-  import { useForm } from '@inertiajs/inertia-vue3'
+  import { useForm, Link } from '@inertiajs/inertia-vue3'
 
   const form = useForm({
     email: null,
