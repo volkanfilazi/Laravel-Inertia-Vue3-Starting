@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Listing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ListingController extends Controller
 {
+
+  public function __construct()
+  {
+    $this->authorizeResource(Listing::class, 'listing');
+  }
   /**
    * Display a listing of the resource.
    */
@@ -59,6 +65,9 @@ class ListingController extends Controller
    */
   public function show(Listing $listing)
   {
+    // if(Auth::user()->cannot('view', $listing)){
+    //   abort(403);
+    // }
     return inertia(
       'Listing/Show',
       [
