@@ -21,6 +21,7 @@
 - Composer
 - Node.js
 - Docker
+- Angular/cli
 
 ## How To Start
 Client Side
