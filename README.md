@@ -10,11 +10,11 @@
 ## Theme
 - A real-time real estate single page application
 - Created with Laravel Inertia.js and vue3
-- Login System
+- Login & Register System
 - Database Connection
 - Advanced Filter Functions.
 - Offer system between users.
-- Soon in real webserver.
+- Real database connection
 
 ## Install
 - Php 9
