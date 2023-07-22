@@ -8,9 +8,12 @@
   }
 
   .input {
-    @apply border-[1px] h-8 w-full outline-none focus:border-blue-700 focus:border-[2px] px-1 border-black rounded-md
+    @apply border-[1px] h-8 w-full outline-none focus:border-blue-700 px-1 border-black rounded-md
   }
 
+  .input-form {
+    @apply border-[1px] w-24 h-7 outline-none focus:border-blue-700 px-1 border-black rounded-md
+  }
   .button-primary {
     @apply border-[1px] p-1 rounded-md transition-all duration-300 border-black bg-blue-700 hover:opacity-80 text-white
   }
