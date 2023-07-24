@@ -17,7 +17,7 @@
 - Real database connection
 
 ## Install
-- Php 9
+- Php9
 - Composer
 - Node.js
 - Docker
